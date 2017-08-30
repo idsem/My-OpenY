@@ -1,0 +1,26 @@
+name: 'OpenY Facility'
+description: 'OpenY Facility.'
+type: module
+core: 8.x
+package: OpenY
+dependencies:
+  - address
+  - ctools
+  - entity_reference_revisions
+  - field
+  - field_group
+  - geolocation
+  - rabbit_hole
+  - link
+  - menu_ui
+  - metatag
+  - node
+  - openy_loc_branch
+  - openy_location
+  - openy_node
+  - paragraphs
+  - path
+  - pathauto
+  - taxonomy
+  - telephone
+  - user

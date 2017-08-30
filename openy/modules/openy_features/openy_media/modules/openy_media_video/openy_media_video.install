@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update routines.
+ */
+
+use Drupal\openy_media\EmbedButtonIconHelper;
+
+/**
+ * Implements hook_install().
+ */
+function openy_media_video_install() {
+  EmbedButtonIconHelper::setEmbedButtonIcon('openy_media_video', 'video.png', 'embed_video');
+}
+
+/**
+ * Update description for field.
+ */
+function openy_media_video_update_8001() {
+  $config_importer = \Drupal::service('openy_upgrade_tool.param_updater');
+  $config = drupal_get_path('module', 'openy_media_video');
+  $config .= '/config/install/';
+  $config .= 'field.field.media.video.field_media_in_library.yml';
+  $config_importer->update(
+    $config,
+    'field.field.media.video.field_media_in_library',
+    'description'
+  );
+}
